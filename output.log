@@ -1,14 +1,18 @@
-node:internal/modules/cjs/loader:1137
-  throw err;
-  ^
-
-Error: Cannot find module '/home/ubuntu/study_log2/backlogMirror/app.js'
-    at Module._resolveFilename (node:internal/modules/cjs/loader:1134:15)
-    at Module._load (node:internal/modules/cjs/loader:975:27)
-    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:128:12)
-    at node:internal/main/run_main_module:28:49 {
-  code: 'MODULE_NOT_FOUND',
-  requireStack: []
+🌐 サーバー起動: http://localhost:3000
+❌ DB接続失敗: Error: Access denied for user ''@'localhost'
+    at Packet.asError (/home/ubuntu/study_log2/backlogMirror/node_modules/mysql2/lib/packets/packet.js:740:17)
+    at ClientHandshake.execute (/home/ubuntu/study_log2/backlogMirror/node_modules/mysql2/lib/commands/command.js:29:26)
+    at Connection.handlePacket (/home/ubuntu/study_log2/backlogMirror/node_modules/mysql2/lib/base/connection.js:475:34)
+    at PacketParser.onPacket (/home/ubuntu/study_log2/backlogMirror/node_modules/mysql2/lib/base/connection.js:93:12)
+    at PacketParser.executeStart (/home/ubuntu/study_log2/backlogMirror/node_modules/mysql2/lib/packet_parser.js:75:16)
+    at Socket.<anonymous> (/home/ubuntu/study_log2/backlogMirror/node_modules/mysql2/lib/base/connection.js:100:25)
+    at Socket.emit (node:events:517:28)
+    at addChunk (node:internal/streams/readable:368:12)
+    at readableAddChunk (node:internal/streams/readable:341:9)
+    at Readable.push (node:internal/streams/readable:278:10) {
+  code: 'ER_ACCESS_DENIED_NO_PASSWORD_ERROR',
+  errno: 1698,
+  sqlState: '28000',
+  sqlMessage: "Access denied for user ''@'localhost'",
+  sql: undefined
 }
-
-Node.js v18.19.1
